@@ -1,9 +1,28 @@
 {
-  "name": "Typescript",
+  "name": "typescript-template",
   "version": "1.0.0",
   "description": "Typescript Template",
-  "main": "index.ts",
+  "main": "index.js",
   "repository": "https://github.com/fawzibazari/Typescript.git",
   "author": "fawzibazari <fawzi.bazari2@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "typescript": "^4.5.2",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node app.ts",
+    "dev": "nodemon app.ts",
+    "build": "rm -rf build/ && prettier --write src/ && tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.5",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0"
+  }
 }
