@@ -16,9 +16,10 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "start": "node app.ts",
-    "dev": "nodemon app.ts",
-    "build": "rm -rf build/ && prettier --write src/ && tsc"
+    "start": "yarn build && node bin/src/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json"
   },
   "devDependencies": {
     "@types/node": "^17.0.5",
