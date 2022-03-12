@@ -2,27 +2,29 @@
   "name": "typescript-template",
   "version": "1.0.0",
   "description": "Typescript Template",
-  "main": "index.js",
+  "main": "index.ts",
   "repository": "https://github.com/fawzibazari/Typescript.git",
   "author": "fawzibazari <fawzi.bazari2@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
+    "dotenv": "^16.0.0",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "typescript": "^4.5.2",
-    "nodemon": "^2.0.15"
+    "typescript": "^4.5.2"
   },
   "scripts": {
     "start": "yarn build && node bin/src/index.js",
+    "start:prod": "node bin/src/index.js",
     "dev": "nodemon src/index.ts",
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json"
   },
   "devDependencies": {
     "@types/node": "^17.0.5",
+    "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "ts-node": "^10.4.0"
   }
