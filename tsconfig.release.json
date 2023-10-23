@@ -1,11 +1,8 @@
 {
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-      "rootDir": ".",
-      "outDir": "bin",
-      "removeComments": true
-    },
-    "include": [
-      "src/**/*"
-    ]
-  }
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "removeComments": true
+  },
+  "include": ["src/**/*"]
+}
